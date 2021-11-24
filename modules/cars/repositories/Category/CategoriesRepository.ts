@@ -1,7 +1,7 @@
 import { Category } from "../../models/Category";
 import { ICategoriesRepository, ICategoryDTO } from "./ICategoriesRepository";
 
-class CategoryRepositories implements ICategoriesRepository{
+class CategoryRepositories implements ICategoriesRepository {
   private categories: Category[];
 
   constructor() {
@@ -9,7 +9,7 @@ class CategoryRepositories implements ICategoriesRepository{
   }
 
   create({ description, name }: ICategoryDTO): Category {
-    const category = new Category(name, description)
+    const category = new Category({ name, description })
     this.categories.push(category);
     return category;
   }
