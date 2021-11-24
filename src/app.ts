@@ -1,16 +1,11 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import { categoriesRoute } from '../routes/categories.routes';
 const port = 8000;
 
 const app = express();
+
 app.use(express.json());
-
-app.get('/', (request: Request, response: Response) => {
-  const { name } = request.body;
-
-  return response.json({
-    message: `Hello ${name}!`
-  })
-});
+app.use('/categories', categoriesRoute);
 
 app.listen(port, () => {
   console.log(`Running on port ${port}`);
