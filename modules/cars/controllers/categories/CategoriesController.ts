@@ -1,6 +1,6 @@
 import { Category } from "../../models/Category";
-import { CategoriesRepository } from "../../repositories/Category/CategoriesRepository";
 import { ICategoriesRepository } from "../../repositories/Category/ICategoriesRepository"
+import { CategoriesRepository } from "../../repositories/Category/implementations/CategoriesRepository";
 import { CreateCategoryService } from "../../services/CreateCategoryService";
 import { ICreateCategoryDTO } from "./types/CategoriesController";
 
