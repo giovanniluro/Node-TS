@@ -1,4 +1,4 @@
-import { ISpecificationRepository } from "../repositories/Specification/ISpecificationsRepositry";
+import { ISpecificationRepository } from "../../repositories/Specification/ISpecificationsRepositry";
 
 interface IExecute {
   name: string

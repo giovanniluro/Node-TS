@@ -1,7 +1,7 @@
 import { Specification } from "../../models/Specification";
 import { ISpecificationRepository } from "../../repositories/Specification/ISpecificationsRepositry";
 import { SpecificationsRepository } from "../../repositories/Specification/implementations/SpecificationsRepository";
-import { CreateSpecificationService } from "../../services/CreateSpecificationService";
+import { CreateSpecificationService } from "../../services/specifications/CreateSpecificationService";
 import { ICreateSpecificationDTO } from "./types/CategoriesController";
 
 class SpecificationsController {

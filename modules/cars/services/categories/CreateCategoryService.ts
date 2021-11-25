@@ -1,5 +1,5 @@
-import { Category } from "../models/Category";
-import { ICategoriesRepository } from "../repositories/Category/ICategoriesRepository";
+import { Category } from "../../models/Category";
+import { ICategoriesRepository } from "../../repositories/Category/ICategoriesRepository";
 
 interface IExecute {
   name: string

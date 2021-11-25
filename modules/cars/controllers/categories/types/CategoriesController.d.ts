@@ -3,4 +3,8 @@ interface ICreateCategoryDTO {
   name: string;
 }
 
-export { ICreateCategoryDTO }
+interface IImportCategoriesDTO {
+  file: Express.Multer.File;
+}
+
+export { ICreateCategoryDTO , IImportCategoriesDTO}
