@@ -13,7 +13,7 @@ class CategoriesController {
 
   private constructor() {
     this.categoriesRepository = new CategoriesRepository();
-    this.importCategoriesService = new ImportCategoriesService();
+    this.importCategoriesService = new ImportCategoriesService(this.categoriesRepository);
     this.createCategoryService = new CreateCategoryService(this.categoriesRepository);
   }
 
@@ -32,8 +32,8 @@ class CategoriesController {
     return this.categoriesRepository.list();
   }
 
-  importCategories({ file }: IImportCategoriesDTO) {
-    this.importCategoriesService.execute(file);
+  async importCategories({ file }: IImportCategoriesDTO) {
+    await this.importCategoriesService.execute(file);
     return this.categoriesRepository.list();
   }
 };

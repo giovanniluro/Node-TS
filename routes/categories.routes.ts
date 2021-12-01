@@ -29,10 +29,10 @@ categoriesRoute.get('/', (req: Request, res: Response) => {
   return res.json(categoriesController.listCategories());
 });
 
-categoriesRoute.post('/import', upload.single('fileUpload'), (req: Request, res: Response) => {
+categoriesRoute.post('/import', upload.single('fileUpload'), async (req: Request, res: Response) => {
   const { file } = req;
-  categoriesController.importCategories({ file });
-  return res.send();
+  const newCategories = await categoriesController.importCategories({ file });
+  return res.status(200).json(newCategories);
 })
 
 export { categoriesRoute }
